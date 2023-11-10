@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkedin Clone Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="index.html" class="logo"><img src="images/logo.png" /></a>
+
+        <div class="search-box">
+          <img src="images/search.png" />
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
+      <div class="navbar-center">
+        <ul>
+          <li>
+            <a href="#" class="active-link"
+              ><img src="images/home.png" /> <span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/network.png" /> <span>My Network</span></a
+            >
+          </li>
+          <li>
+            <a href="#"><img src="images/jobs.png" /> <span>Jobs</span></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/message.png" /> <span>Messaging</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img src="images/notification.png" />
+              <span>Notifications</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <div class="online">
+          <img
+            src="images/user-1.png"
+            class="nav-profile-img"
+            onclick="toggleMenu()"
+          />
+        </div>
+      </div>
+
+      <!-- navbar end -->
+
+      <!-- profil drop down menu start -->
+      <div class="profile-menu-wrap" id="profileMenu">
+        <div class="profile-menu">
+          <div class="user-info">
+            <img src="images/user-1.png" />
+            <div>
+              <h3>Bahattin Umur</h3>
+              <a href="profile.html">Wiev Profile</a>
+            </div>
+          </div>
+          <hr />
+          <a href="#" class="profile-menu-link">
+            <img src="images/feedback.png" />
+            <p>Language</p>
+            <span>></span>
+          </a>
+          <a href="#" class="profile-menu-link">
+            <img src="images/setting.png" />
+            <p>Setting & Privacy</p>
+            <span>></span>
+          </a>
+          <a href="#" class="profile-menu-link">
+            <img src="images/help.png" />
+            <p>Help</p>
+            <span>></span>
+          </a>
+          <a href="#" class="profile-menu-link">
+            <img src="images/display.png" />
+            <p>Post & Activity</p>
+            <span>></span>
+          </a>
+          <a href="#" class="profile-menu-link">
+            <img src="images/logout.png" />
+            <p>Sign Out</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- profil drop down menu end -->
+
+    <!-- left side bar start -->
+
+    <div class="container">
+      <div class="left-sidebar">
+        <div class="sidebar-profile-box">
+          <img src="images/cover-pic.png" width="100%" />
+          <div class="sidebar-profile-info">
+            <img src="images/user-1.png" />
+            <h1>Bahattin Umur</h1>
+            <h3>Web Developer at Udemig</h3>
+            <ul>
+              <li>Profile viewers<span>345</span></li>
+              <li>Post impressions<span>927</span></li>
+              <li>Your network<span>234</span></li>
+            </ul>
+          </div>
+          <div class="sidebar-profile-link">
+            <a href="#"><img src="images/items.png" /> My items</a>
+            <a href="#"><img src="images/premium.png" /> Try Premium </a>
+          </div>
+        </div>
+
+        <div class="sidebar-activity" id="sidebarActivity">
+          <h3>Events</h3>
+          <a href="#"><img src="images/recent.png" /> Web Development</a>
+          <a href="#"><img src="images/recent.png" /> User Interface</a>
+          <a href="#"><img src="images/recent.png" /> Online Education</a>
+          <a href="#"><img src="images/recent.png" /> Online Learning</a>
+          <a href="#"><img src="images/recent.png" /> Better Coding</a>
+          <a href="#"><img src="images/recent.png" /> Group Collaboration</a>
+          <h3>Groups</h3>
+          <a href="#"><img src="images/group.png" /> Web Design Group</a>
+          <a href="#"><img src="images/group.png" /> HTML and CSS Learners</a>
+          <a href="#"
+            ><img src="images/group.png" /> Python and JavaScript Group</a
+          >
+          <a href="#"><img src="images/group.png" /> Learn Coding Online</a>
+          <h3>Tags</h3>
+          <a href="#"><img src="images/hashtag.png" /> Website Development</a>
+          <a href="#"><img src="images/hashtag.png" /> User Interface</a>
+          <a href="#"><img src="images/hashtag.png" /> E-Commerce</a>
+          <div class="discover-more-link">
+            <a href="">More</a>
+          </div>
+        </div>
+
+        <p id="showMoreLink" onclick="toggleActivity()">Show More <b>+</b></p>
+      </div>
+
+      <!-- left side bar end -->
+
+      <!-- main content start -->
+      <div class="main-content">
+        <div class="create-post">
+          <div class="create-post-input">
+            <img src="images/user-1.png" />
+            <textarea rows="2" placeholder="Start a post"></textarea>
+          </div>
+          <div class="create-post-links">
+            <li><img src="images/photo.png" />Photograph</li>
+            <li><img src="images/video.png" />Video</li>
+            <li><img src="images/event.png" />Events</li>
+            <li>Post</li>
+          </div>
+        </div>
+        <div class="sort-by">
+          <hr />
+          <p>
+            Sort by: <span> Top <img src="images/down-arrow.png" /></span>
+          </p>
+        </div>
+
+        <div class="post">
+          <div class="post-author">
+            <img src="images/user-3.png" />
+            <div>
+              <h1>Julia Lila</h1>
+              <small>CEO of Computer & Coder | Top Executive</small>
+              <small
+                >2h <i class="fa-solid fa-location-pin"></i>
+                <i class="fa-solid fa-earth-americas"></i>
+              </small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem!
+            Dolor officia repellat, maiores doloribus facilis tempora veniam
+            hic! Asperiores non quae tempore minus, veniam quod alias harum.
+          </p>
+          <img src="images/post-image-1.jpg" width="100%" />
+
+          <div class="post-stats">
+            <div>
+              <img src="images/thumbsup.png" />
+              <img src="images/love.png" />
+              <img src="images/clap.png" />
+              <span class="liked-users">Marcus Mark and 596 others</span>
+            </div>
+            <div>
+              <span>59 comments &middot; 136 repost</span>
+            </div>
+          </div>
+          <div class="post-activity">
+            <div>
+              <img src="images/user-1.png" class="post-activity-user-icon" />
+              <img
+                src="images/down-arrow.png"
+                class="post-activity-arrow-icon"
+              />
+            </div>
+            <div class="post-activity-link">
+              <img src="images/like.png" />
+              <span>Like</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/comment.png" />
+              <span>Comment</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/share.png" />
+              <span>Repost</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/send.png" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-author">
+            <img src="images/user-2.png" />
+            <div>
+              <h1>Antonio Reyes</h1>
+              <small>Texas Network | Computer Engineer </small>
+              <small
+                >3h <i class="fa-solid fa-location-pin"></i>
+                <i class="fa-solid fa-earth-americas"></i>
+              </small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem!
+            Dolor officia repellat, maiores doloribus facilis tempora veniam
+            hic! Asperiores non quae tempore minus, veniam quod alias harum.
+          </p>
+          <img src="images/post-image-2.jpg" width="100%" />
+
+          <div class="post-stats">
+            <div>
+              <img src="images/thumbsup.png" />
+              <img src="images/love.png" />
+              <img src="images/clap.png" />
+              <span class="liked-users">Adriana Pedro and others 85</span>
+            </div>
+            <div>
+              <span>15 comments &middot; 25 repost</span>
+            </div>
+          </div>
+          <div class="post-activity">
+            <div>
+              <img src="images/user-1.png" class="post-activity-user-icon" />
+              <img
+                src="images/down-arrow.png"
+                class="post-activity-arrow-icon"
+              />
+            </div>
+            <div class="post-activity-link">
+              <img src="images/like.png" />
+              <span>Like</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/comment.png" />
+              <span>Comment</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/share.png" />
+              <span>Repost</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/send.png" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-author">
+            <img src="images/user-4.png" />
+            <div>
+              <h1>Nicole Watson</h1>
+              <small>Michagan University | Academician </small>
+              <small
+                >3h <i class="fa-solid fa-location-pin"></i>
+                <i class="fa-solid fa-earth-americas"></i>
+              </small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem!
+            Dolor officia repellat, maiores doloribus facilis tempora veniam
+            hic! Asperiores non quae tempore minus, veniam quod alias harum.
+          </p>
+          <img src="images/post-image-3.jpg" width="100%" />
+
+          <div class="post-stats">
+            <div>
+              <img src="images/thumbsup.png" />
+              <img src="images/love.png" />
+              <img src="images/clap.png" />
+              <span class="liked-users">Rashid Ahmedov and others 86 </span>
+            </div>
+            <div>
+              <span>7 comments &middot; 3 repost</span>
+            </div>
+          </div>
+          <div class="post-activity">
+            <div>
+              <img src="images/user-1.png" class="post-activity-user-icon" />
+              <img
+                src="images/down-arrow.png"
+                class="post-activity-arrow-icon"
+              />
+            </div>
+            <div class="post-activity-link">
+              <img src="images/like.png" />
+              <span>Like</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/comment.png" />
+              <span>Comment</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/share.png" />
+              <span>Repost</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/send.png" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-author">
+            <img src="images/user-5.png" />
+            <div>
+              <h1>Min-jun Yang</h1>
+              <small>Samsung | Mobile Developer</small>
+              <small
+                >5h <i class="fa-solid fa-location-pin"></i>
+                <i class="fa-solid fa-earth-americas"></i>
+              </small>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem!
+            Dolor officia repellat, maiores doloribus facilis tempora veniam
+            hic! Asperiores non quae tempore minus, veniam quod alias harum.
+          </p>
+          <img src="images/post-image-4.jpg" width="100%" />
+
+          <div class="post-stats">
+            <div>
+              <img src="images/thumbsup.png" />
+              <img src="images/love.png" />
+              <img src="images/clap.png" />
+              <span class="liked-users">Tom James and others 75</span>
+            </div>
+            <div>
+              <span>14 comments &middot; 20 repost</span>
+            </div>
+          </div>
+          <div class="post-activity">
+            <div>
+              <img src="images/user-1.png" class="post-activity-user-icon" />
+              <img
+                src="images/down-arrow.png"
+                class="post-activity-arrow-icon"
+              />
+            </div>
+            <div class="post-activity-link">
+              <img src="images/like.png" />
+              <span>Like</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/comment.png" />
+              <span>Comment</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/share.png" />
+              <span>Repost</span>
+            </div>
+            <div class="post-activity-link">
+              <img src="images/send.png" />
+              <span>Send</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main content start -->
+
+      <!-- right sidebar start -->
+      <div class="right-sidebar">
+        <div class="sidebar-news">
+          <img src="images/more.png" class="info-icon" />
+          <h3>Trending News</h3>
+          <a href="#">High Demand for Skilled Coders</a>
+          <span>6 hours ago &middot; 1.934 reader</span>
+
+          <a href="#">Risk of recession in the U.S.!</a>
+          <span>19 hours ago &middot; 15.552 reader</span>
+
+          <a href="#">Work Visas for the U.S. and the U.K.</a>
+          <span>1 day ago &middot; 27.290 reader</span>
+
+          <a href="#">More Hiring = Less Trust?</a>
+          <span>1 day ago &middot; 8.208 reader</span>
+
+          <a href="#">What is the Modern Technology?</a>
+          <span>2 day ago &middot; 4.205 reader</span>
+
+          <a href="" class="read-more-link">More</a>
+        </div>
+
+        <div class="sidebar-ad">
+          <small>Advertising &middot; &middot; &middot;</small>
+          <p>Innovations in Xiaomi</p>
+          <div>
+            <img src="images/user-1.png" alt="#" />
+            <img src="images/mi-logo.png" alt="Mi Logo" />
+          </div>
+          <b>About The New CellPhone of Xiaomi</b>
+          <a href="#" class="ad-link">More Info..</a>
+        </div>
+
+        <div class="sidebar-useful-links">
+          <a href="#">About</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Help Center</a>
+          <a href="#">Privacy & Terms</a>
+          <a href="#">Advertising</a>
+          <a href="#">Get the Linkedin app</a> <br />
+          <a href="#">More</a>
+
+          <div class="copyright-msg">
+            <img src="images/logo.png" />
+            <p>Linkedin &#169; 2023. All right reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+<!-- right sidebar end -->
